@@ -1,0 +1,19 @@
+.corpo{
+    margin-left: 510px;
+    margin-top: 200px; 
+    }
+    
+    body{
+      background-image: url(https://images4.alphacoders.com/106/106826.jpg);
+      background-repeat: no-repeat;
+      background-size: 1710px 1100px;
+      display: flex;
+    }
+
+.head{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
