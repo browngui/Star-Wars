@@ -9,4 +9,7 @@ Ainda não foi totalmente feito. Até o momento foram feitos o seguinte:
 - [ ] Validação de login do usuário ao web site;
 - [ ] Trabalho de implementação das páginas do Clone Wars, The Book of Boba Fett e Obi-Wan Kenobi
 
-### O back-end do projeto está no próximo repositório, junto com o banco de dados do projeto.
+## Caso queira ver como o projeto está atualmente:
+- Faça o clone do projeto em sua máquina; 
+- instale as dependencias;
+- inicie o projeto no terminal.
