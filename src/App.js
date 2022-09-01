@@ -8,7 +8,7 @@ import Login from './pages/telaLogin/login'
 import Cadastro from './pages/telaCadastro/cadastro';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import ProtectedRouter from './protectedRouter';
-
+import Gender from './pages/Gender';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
             <Route path='/Carousel' element={<Carousel/>} />
             <Route path='/Card' element={<Card/>} />
             <Route path='/Error'element={<Error/>} />
+            <Route path='/Gender'element={<Gender/>} />
             </Route>
 
             <Route path='/Login' element={<Login/>} />
