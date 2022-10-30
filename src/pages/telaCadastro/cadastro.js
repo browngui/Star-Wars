@@ -20,7 +20,7 @@ function Register() {
     const data = {
       userName,email,password
     }
-  
+  console.log(data)
     await api.post('/user', data);
       alert(`Usuario ${userName} cadastrado com sucesso`);
   

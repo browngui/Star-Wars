@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal } from "react-modal";
+import  Modal  from "react-modal";
 import axios from "axios";
 
 const customStyles = {
@@ -16,8 +16,33 @@ const customStyles = {
 
 function Index({ isOpen, dataGender }) {
     const [modalIsOpen, setIsOpen] = useState(isOpen);
+
+    // console.log(dataGender.genero)
+    console.log(isOpen)
     const [txtGender, setTxtGender] = useState(dataGender.genero);
-    console.log(dataGender);
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+
+    async function handleSubmit(e) {
+        e.preventDefault(); //Evita que a página seja atualizada
+
+        const genderData = {
+            "genero": txtGender,
+            "idGenero": dataGender.id_genero,
+        }
+        console.log(genderData)
+
+        const { data } = await axios.put('http://localhost:3333/gender', genderData);
+        console.log(data)
+        alert(data.message);
+        
+        window.location.reload(true);
+    }
+
+
     return (
         <div>
             <Modal
@@ -47,15 +72,16 @@ function Index({ isOpen, dataGender }) {
                         type="submit"
                         name="action"
                         onClick={handleSubmit}
-                    > Update </button> 
+                    > Update </button>
 
                     <button
                         className="btn modal-trigger"
-                        onClick={() => { window.location.reload(true)}}
+                        onClick={() => { window.location.reload(true) }}
                     > Cancelar </button>
                 </div>
             </Modal>
         </div>
+        
     )
 }
 
